@@ -10,7 +10,7 @@ userForm.loginFormCallback = data => {
 		if (response.success) {
 			location.reload();
 		} else {
-			userForm.setLoginErrorMessage('Произошла ошибка при авторизации!');
+			userForm.setLoginErrorMessage(response.error || 'Произошла ошибка при авторизации!');
 		}
 	});
 }
@@ -20,7 +20,7 @@ userForm.registerFormCallback = data => {
 		if (response.success) {
 			location.reload();
 		} else {
-			userForm.setRegisterErrorMessage('Произошла ошибка при регистрации!');
+			userForm.setRegisterErrorMessage(response.error ||'Произошла ошибка при регистрации!');
 		}
 	});
 }
